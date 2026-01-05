@@ -1,0 +1,100 @@
+---
+title: Introduction to Lpk
+description: Discover Lpk, your default documentation space for organizing and managing all project documentation with ease.
+---
+
+## Overview
+
+Lpk provides a centralized space for you to organize, manage, and publish all your project documentation. You create custom pages, embed interactive components, and collaborate with your team in real-time. Whether you document APIs, user guides, or internal wikis, Lpk scales with your needs.
+
+Start by connecting your GitHub repository or uploading Markdown files directly. Lpk renders MDX with full support for custom components like tabs, steps, and code groups, ensuring your docs look professional without extra setup.
+
+<Callout kind="info">
+  Lpk uses `#3B82F6` as the primary brand color. Apply it consistently for buttons, links, and accents to maintain visual unity.
+</Callout>
+
+## Key Features
+
+Lpk stands out with intuitive tools that streamline documentation workflows. Explore these core capabilities:
+
+<Columns cols={3}>
+  <Card title="MDX Components" icon="code" href="#mdx-support">
+    Embed interactive elements like `<Steps>`, `<Tabs>`, and `<CodeGroup>` directly in your pages.
+  </Card>
+  <Card title="Real-Time Collaboration" icon="users" href="#collaboration">
+    Edit docs with your team simultaneously, with version history and comments.
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="#domains">
+    Host your docs on a custom domain like `docs.yourproject.com`.
+  </Card>
+  <Card title="Search & Analytics" icon="search" href="#analytics">
+    Built-in search and page analytics help users find content quickly.
+  </Card>
+</Columns>
+
+## Quick Navigation Guide
+
+Get up and running in minutes with these steps:
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://lpk.example.com` using GitHub or email.
+  </Step>
+  <Step title="Import Repo" icon="download">
+    Connect your repository or upload MDX files.
+  </Step>
+  <Step title="Customize Pages" icon="edit-3">
+    Edit frontmatter and add components like this `<Steps>` block.
+  </Step>
+  <Step title="Publish" icon="rocket">
+    Deploy instantly—changes go live without builds.
+  </Step>
+</Steps>
+
+## Brand Color and Styling Guidelines
+
+Maintain consistency using Lpk's brand color `#3B82F6`. Define it in your CSS variables for easy theming.
+
+<CodeGroup tabs="CSS,SCSS,Tailwind">
+  ```css
+  :root {
+    --brand-color: #3B82F6;
+  }
+
+  .button {
+    background-color: var(--brand-color);
+    color: white;
+  }
+  ```
+  ```scss
+  $brand-color: #3B82F6;
+
+  .button {
+    background-color: $brand-color;
+    color: white;
+  }
+  ```
+  ```html
+  <!-- Tailwind example -->
+  <button class="bg-[#3B82F6] text-white px-4 py-2 rounded">
+    Primary Button
+  </button>
+  ```
+</CodeGroup>
+
+<Callout kind="tip" kind="tip">
+  Test your styling across themes. Use `{--brand-color: #3B82F6}` in custom CSS for overrides.
+</Callout>
+
+## Next Steps
+
+Dive deeper with these resources:
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up your first project in under 5 minutes.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and OAuth.
+  </Card>
+</Columns>

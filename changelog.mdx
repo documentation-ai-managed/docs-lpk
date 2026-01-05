@@ -1,0 +1,132 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Lpk.
+---
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added support for custom brand colors in your documentation theme. Set your brand color like `#3B82F6` directly in the config.
+- Introduced real-time preview mode for MDX edits, allowing you to see changes instantly without rebuilding.
+- New `<Video>` component for embedding self-hosted or platform videos with controls and posters.
+
+## Improvements
+
+- Enhanced search functionality with fuzzy matching and snippet previews.
+- Optimized build times by 40% for sites with 100+ pages.
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks inside JSX components.
+- Resolved issue where `{` and `}` characters broke prose text rendering.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Launched `<Columns>` and `<Card>` components for creating feature grids and navigation sections.
+- Added `<Tabs>` and `<CodeGroup>` for platform-specific instructions and multi-language examples.
+
+## Improvements
+
+- Better handling of special characters like `<`, `>`, `{`, `}` with automatic escaping guides.
+- Improved accessibility with required `alt` and `title` attributes on all media components.
+
+## Bug Fixes
+
+- Corrected heading hierarchy enforcement to always start with H2 after frontmatter.
+- Fixed self-closing tags for container components like `<Steps>` and `<Update>`.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Core MDX documentation engine with YAML frontmatter validation.
+- Built-in components including `<Callout>`, `<Steps>`, `<ParamField>`, and `<Request>`.
+- Mermaid diagram support via code blocks (not JSX components).
+
+## Breaking Changes
+
+- Removed legacy H1 support; all pages now require frontmatter titles.
+- Standardized attribute syntax to double quotes only.
+
+## Initial Setup
+
+- First release with full parsing rules for error-free MDX.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade Lpk to the latest version.
+
+<Steps>
+  <Step title="Backup Your Site" icon="database">
+
+    Create a backup of your current documentation:
+
+````bash
+cp -r docs/ docs-backup-$(date +%Y%m%d)
+````
+
+  </Step>
+  <Step title="Update Package" icon="package">
+
+    <CodeGroup tabs="npm,yarn">
+
+````bash
+npm install lpk@latest
+````
+
+````bash
+yarn add lpk@latest
+````
+
+    </CodeGroup>
+
+  </Step>
+  <Step title="Rebuild and Test" icon="zap">
+
+    Rebuild your site and check for parsing errors:
+
+````bash
+npm run build
+npm run dev
+````
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Review the migration notes in each `<Update>` above for version-specific changes. Test thoroughly before deploying to production.
+</Callout>
+
+## Upcoming Changes
+
+Get a preview of what's coming next.
+
+<Columns cols={2}>
+  <Card title="v1.3.0 (Q4 2024)" icon="rocket" href="/changelog#v1.3-preview">
+    AI-assisted documentation generation and advanced analytics integration.
+  </Card>
+  <Card title="v1.4.0 (Q1 2025)" icon="star" href="/changelog#v1.4-preview">
+    Full GitHub integration for automated deployments and pull request previews.
+  </Card>
+</Columns>
+
+<Expandable title="How to Contribute" default-open="false">
+
+If you encounter issues or want to suggest features, check the [contribution guidelines](https://github.com/example/lpk/blob/main/CONTRIBUTING.md). Submit bug reports with minimal reproducible examples.
+
+</Expandable>
+
+## Stay Informed
+
+Subscribe to updates via the dashboard at `https://dashboard.example.com/notifications` or watch the GitHub repository for release notifications. Your feedback helps shape Lpk's future.

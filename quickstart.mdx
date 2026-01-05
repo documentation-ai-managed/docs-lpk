@@ -1,0 +1,152 @@
+---
+title: Getting Started with Lpk
+description: Set up your Lpk account and create your first documentation space in minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A modern web browser like Chrome or Firefox
+- An email address for account verification
+- Optional: Node.js `{^18.0.0}` for CLI tools
+
+<Callout kind="info">
+
+Lpk works on all major platforms. No downloads required for basic setup.
+
+</Callout>
+
+## Sign Up and Create Account
+
+Follow these steps to register your Lpk account.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://dashboard.example.com` and click **Sign Up**.
+
+    Select your preferred method:
+
+    <Tabs>
+      <Tab title="Email" icon="mail">
+        Enter your email and create a password.
+      </Tab>
+      <Tab title="Google" icon="chrome">
+        Click **Continue with Google** for one-click signup.
+      </Tab>
+      <Tab title="GitHub" icon="github">
+        Authorize with your GitHub account.
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Verify Email" icon="check-circle">
+    Check your inbox for the verification link from Lpk.
+
+    Click the link to activate your account.
+  </Step>
+
+  <Step title="Complete Profile" icon="user">
+    Provide your name and organization details.
+
+    Accept the terms of service.
+  </Step>
+</Steps>
+
+## Set Up Your First Workspace
+
+Workspaces organize your documentation projects.
+
+<Steps>
+  <Step title="Create Workspace" icon="folder">
+    From the dashboard, click **New Workspace**.
+
+    Name it `My Project Docs` and select **Public** or **Private** visibility.
+  </Step>
+
+  <Step title="Configure Settings" icon="settings">
+    Add team members if needed.
+
+    Set the default brand color to `#3B82F6`.
+  </Step>
+</Steps>
+
+## Create Your First Project
+
+Projects contain your documentation pages.
+
+<Steps>
+  <Step title="Add Project" icon="plus">
+    Inside your workspace, select **New Project**.
+
+    Choose **Blank Project** or import from GitHub.
+  </Step>
+
+  <Step title="Add First Page" icon="file-text">
+    Click **New Page** and title it `Introduction`.
+
+    Use the MDX editor to add content.
+  </Step>
+
+  <Step title="Publish" icon="globe">
+    Preview your page, then click **Publish**.
+
+    Share the live URL: `https://docs.example.com/my-project-docs/introduction`.
+  </Step>
+</Steps>
+
+## Basic Interface Tour
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3">
+    Write MDX content with live preview.
+  </Card>
+
+  <Card title="Navigation" icon="menu">
+    Sidebar for pages, settings, and analytics.
+  </Card>
+
+  <Card title="Preview" icon="eye">
+    Real-time rendering of your docs.
+  </Card>
+</Columns>
+
+## Optional: Install Lpk CLI
+
+For advanced users, install the CLI to manage projects locally.
+
+<CodeGroup tabs="npm,yarn">
+````bash
+npm install -g @lpk/cli
+````
+
+````bash
+yarn global add @lpk/cli
+````
+</CodeGroup>
+
+Initialize a project:
+
+````bash
+lpk init my-local-docs
+cd my-local-docs
+lpk dev
+````
+
+<Callout kind="tip">
+
+Visit `https://docs.example.com` to explore your published docs.
+
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your workspace with API keys.
+  </Card>
+
+  <Card title="Advanced Features" icon="sparkles" href="/introduction">
+    Dive deeper into Lpk capabilities.
+  </Card>
+</Columns>
